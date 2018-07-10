@@ -1,0 +1,50 @@
+# Yijun Li 516030910395
+init:
+	irmovq Stack, %rsp 
+	irmovq Stack, %rbp
+	call main
+	halt	
+# Execution begins at address 0 
+#	 .pos 0
+	.align 8
+ele1:
+	.quad 0x00a
+	.quad ele2
+ele2:
+	.quad 0x0b0
+	.quad ele3
+ele3:
+	.quad 0xc00
+	.quad 0
+	
+main:
+#	irmovq stack, %rsp 
+#	irmovq stack, %rbp
+	irmovq $0, %rax    # val
+	irmovq ele1, %rdi
+	call sum_list
+	ret
+sum_list:  
+	rrmovq %rdi, %rcx   # ls
+	
+	jmp judge
+	ret
+loop:
+	mrmovq (%rcx), %rdx
+	addq %rdx, %rax
+	mrmovq 0x8(%rcx), %rcx
+	
+judge:
+	andq %rcx, %rcx
+	jne loop
+	ret
+
+.pos 0x200
+Stack:
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+// answers for Task1
+ps --sort=args
+
+grep ^a /usr/share/dict/words -c
+
+ls /etc -S -r | grep -F '.conf' | head -n 5
+
+echo echo "Hello world!" >> echo.sh
+sh echo.sh

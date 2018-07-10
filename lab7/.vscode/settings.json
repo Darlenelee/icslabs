@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "array": "c",
+        "slist": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "*.tcc": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "type_traits": "c",
+        "functional": "c",
+        "*.ipp": "c"
+    }
+}

@@ -1,0 +1,2 @@
+movl $0x2,0x202cab(%rip)
+movl $rdi,0x202cad(%rip)
